@@ -1,0 +1,28 @@
+{
+  "name": "testing-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewardou/testing-practice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ewardou/testing-practice/issues"
+  },
+  "homepage": "https://github.com/ewardou/testing-practice#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "eslint": "^8.30.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^29.3.1",
+    "prettier": "^2.8.1"
+  }
+}
