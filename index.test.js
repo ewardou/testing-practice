@@ -1,4 +1,10 @@
-import { capitalize, calculator, reverseString, analyzeArray } from './index';
+import {
+    capitalize,
+    calculator,
+    reverseString,
+    analyzeArray,
+    caesarCipher,
+} from './index';
 
 test('Capitalize', () => {
     expect(capitalize('toMAtO')).toBe('Tomato');
@@ -30,6 +36,20 @@ test('Division', () => {
 
 test('Multiplication', () => {
     expect(calculator.multiply(8, 12)).toEqual(96);
+});
+
+test('Caesar cipher', () => {
+    expect(caesarCipher('abcdefghijklmnopqrstuvwxyz', 8)).toEqual(
+        'ijklmnopqrstuvwxyzabcdefgh'
+    );
+});
+
+test('Caesar cipher 2', () => {
+    expect(caesarCipher('AttaCK aT Dawn', 5)).toEqual('FyyfHP fY Ifbs');
+});
+
+test('Caesar cipher 3', () => {
+    expect(caesarCipher('?#potato.,_', 14)).toEqual('?#dchohc.,_');
 });
 
 test('Analyze array', () => {

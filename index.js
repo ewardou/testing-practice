@@ -52,4 +52,26 @@ function analyzeArray(array) {
     };
 }
 
-export { capitalize, reverseString, calculator, analyzeArray };
+function caesarCipher(string, shift) {
+    let newString = '';
+    const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+    for (let i = 0; i < string.length; i++) {
+        let newElement;
+        if (alphabet.includes(string[i].toLowerCase())) {
+            let newIndex = alphabet.indexOf(string[i].toLowerCase()) + shift;
+            if (newIndex > 25) {
+                newIndex -= 26;
+            }
+            newElement = alphabet[newIndex];
+        } else {
+            newElement = string[i];
+        }
+        if (/[A-Z]/.test(string[i])) {
+            newElement = newElement.toUpperCase();
+        }
+        newString += newElement;
+    }
+    return newString;
+}
+
+export { capitalize, reverseString, calculator, analyzeArray, caesarCipher };
