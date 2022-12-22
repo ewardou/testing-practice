@@ -1,4 +1,4 @@
-import { capitalize, calculator, reverseString } from './index';
+import { capitalize, calculator, reverseString, analyzeArray } from './index';
 
 test('Capitalize', () => {
     expect(capitalize('toMAtO')).toBe('Tomato');
@@ -30,4 +30,17 @@ test('Division', () => {
 
 test('Multiplication', () => {
     expect(calculator.multiply(8, 12)).toEqual(96);
+});
+
+test('Analyze array', () => {
+    expect(analyzeArray([1, 8, 3, 4, 2, 6])).toStrictEqual({
+        average: 4,
+        min: 1,
+        max: 8,
+        length: 6,
+    });
+});
+
+test('Analyze array 2', () => {
+    expect(() => analyzeArray([])).toThrow();
 });

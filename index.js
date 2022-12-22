@@ -34,4 +34,22 @@ const calculator = (function () {
     };
 })();
 
-export { capitalize, reverseString, calculator };
+function analyzeArray(array) {
+    if (array.length === 0) {
+        throw new Error('No values provided');
+    }
+    const orderedArray = array.sort((a, b) => a - b);
+    const min = orderedArray[0];
+    const max = orderedArray[orderedArray.length - 1];
+    const { length } = array;
+    const sum = array.reduce((prev, curr) => prev + curr, 0);
+    const average = sum / length;
+    return {
+        average,
+        min,
+        max,
+        length,
+    };
+}
+
+export { capitalize, reverseString, calculator, analyzeArray };
